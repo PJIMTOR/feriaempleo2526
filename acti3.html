@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3 - Peticiones HTTP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+
+    <header>
+        <h1>Actividad 3 🌐<br>Cómo funcionan las peticiones HTTP</h1>
+        <p>Descubre qué ocurre cuando escribes una URL y pulsas Enter.</p>
+    </header>
+
+    <section>
+
+        <div class="card">
+            <h2>🎯 Objetivo</h2>
+            <p>Entender el modelo <span class="highlight">Cliente → Servidor</span> y cómo se comunican.</p>
+        </div>
+
+        <div class="card">
+            <h2>📡 ¿Qué sucede?</h2>
+
+            <div class="code">
+                Cliente → GET /index.html
+                Servidor → 200 OK + HTML
+            </div>
+
+            <p>En la pestaña <span class="highlight">Network</span> puedes ver:</p>
+            <ul>
+                <li>Método GET</li>
+                <li>Código 200 o 404</li>
+                <li>Tiempo de respuesta</li>
+            </ul>
+
+            <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64" alt="Diagrama cliente servidor">
+        </div>
+
+        <div class="card">
+            <h2>📔 La agenda de direcciones de internet</h2>
+            <p>Una divertida explicación de cómo funcionan los DNS, esto mediante un comic que explica qué sucede cuando
+                escribes una dirección en tu navegador web.
+            </p>
+            <img src="1_tqYSfaCO1VoTxIS2xk8Y7A.png" alt="Comic explicación DNS" class="zoomable">
+        </div>
+
+        <div class="card">
+            <h2>💡 Lo importante</h2>
+            <p>Internet funciona enviando peticiones y recibiendo respuestas.
+                Eso es HTTP.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        Actividad 3 - Taller FP DAW © 2026
+    </footer>
+
+    <script>
+        document.querySelectorAll('.zoomable').forEach(img => {
+            img.addEventListener('click', () => {
+                const overlay = document.createElement('div');
+                overlay.classList.add('zoom-overlay');
+
+                const zoomedImg = document.createElement('img');
+                zoomedImg.src = img.src;
+
+                overlay.appendChild(zoomedImg);
+                document.body.appendChild(overlay);
+
+                overlay.addEventListener('click', () => {
+                    overlay.remove();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

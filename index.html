@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller DAW - Internet en Acción</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <!-- Actividades con dropdown -->
+        <div class="dropdown">
+            <a href="#actividades" class="dropbtn">Actividades ▼</a>
+            <div class="dropdown-content">
+                <a href="acti1.html">Actividad 1 - Inspector</a>
+                <a href="acti2.html">Actividad 2 - Tecnologías</a>
+                <a href="acti3.html">Actividad 3 - HTTP</a>
+                <a href="acti4.html">Actividad 4 - CV Online</a>
+            </div>
+        </div>
+        <a href="#final">Ciclos formativos</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <h1 data-aos="fade-up">Internet en Acción 💻<br> Taller de Formación Profesional</h1>
+
+        <div class="swiper" data-aos="zoom-in">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="thedigitalartist-anonymous-2755365_1920.jpg" alt="Programación">
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-1498050108023-c5249f4df085.jfif" alt="Servidor">
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-1558494949-ef010cbdcc31.jfif" alt="Web Design">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- ACTIVIDADES -->
+    <section id="actividades">
+        <h2 style="text-align:center;margin-bottom:80px;font-size:2.5rem;" data-aos="fade-up">
+            Las 4 Actividades del Taller
+        </h2>
+
+        <div class="activities">
+
+            <!-- 1 -->
+            <div class="card" data-aos="fade-right">
+                <div>
+                    <h3><a href="acti1.html"><i class="fa-solid fa-bug"></i> Hackea tu web favorita</a></h3>
+                    <p>Usamos el inspector del navegador para modificar HTML y CSS en tiempo real.
+                        Cambiamos títulos, colores y textos para entender cómo el servidor envía el código
+                        al navegador.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b" alt="Inspector DevTools">
+            </div>
+
+            <!-- 2 -->
+            <div class="card" data-aos="fade-left">
+                <div>
+                    <h3><a href="acti2.html"><i class="fa-solid fa-microscope"></i> Detectar tecnologías</a></h3>
+
+                    <p>Analizamos qué tecnologías usan las webs reales (React, WordPress, Nginx…).
+                        Descubrimos cómo identificar frameworks y servidores en segundos.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Código Fuente Web">
+            </div>
+
+            <!-- 3 -->
+            <div class="card" data-aos="fade-right">
+                <div>
+                    <h3><a href="acti3.html"><i class="fa-solid fa-globe"></i> Peticiones HTTP en directo</a></h3>
+
+                    <p>Visualizamos cómo el navegador envía peticiones GET y recibe respuestas 200 o 404.
+                        Entendemos cómo funciona realmente Internet.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64" alt="Diagrama Cliente Servidor">
+            </div>
+
+            <!-- 4 -->
+            <div class="card" data-aos="fade-left">
+                <div>
+                    <h3><a href="acti4.html"><i class="fa-solid fa-upload"></i> Publica tu CV en Internet</a></h3>
+
+                    <p>Generamos un CV en HTML con IA y lo desplegamos en un servidor gratuito.
+                        En pocos minutos cada alumno tiene su propia web pública online.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1554306274-f23873d9a26c" alt="Hosting Web">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" style="text-align:center;">
+        <h2 data-aos="zoom-in" style="font-size:2.5rem;">
+            ¿Listo para crear tu futuro en la web?
+        </h2>
+        <div class="flexp">
+            <div class="card" data-aos="fade-right">
+                <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/admin-sist-informaticos-red.html"><img src="logo1.png" alt="Técnico Superior en Administración de Sistemas Informáticos en Red"></a>
+            </div>
+            <div class="card" data-aos="fade-right">
+                <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/des-aplicaciones-web.html"><img src="logo2.png" alt="Técnico Superior en Desarrollo de Aplicaciones Web"></a>
+            </div>
+            <div class="card" data-aos="fade-right">
+               <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/sistemas-microniformaticos-redes.html"> <img src="logo2.png" alt="Técnico en Sistemas Microinformáticos y Redes"></a>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <h3>Accede a nuestra oferta formativa:</h3>
+            <a href="https://www.iesluisvelez.org/portal/"><img src="velez-cabecera-600.png" alt="" style="width: 477px; box-shadow: none;"></a>
+        </div>
+
+    </section>
+
+    <footer>
+        Taller FP IES Luis Vélez de Guevara © 2026. Creado por Pedro Jiménez Torralbo
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({ duration: 1200, once: true });
+
+        new Swiper('.swiper', {
+            loop: true,
+            autoplay: { delay: 3500 },
+            pagination: { el: '.swiper-pagination', clickable: true }
+        });
+    </script>
+
+</body>
+
+</html>
