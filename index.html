@@ -23,18 +23,19 @@
 <body>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <!-- Actividades con dropdown -->
-        <div class="dropdown">
-            <a href="#actividades" class="dropbtn">Actividades ▼</a>
-            <div class="dropdown-content">
-                <a href="acti1.html">Actividad 1 - Inspector</a>
-                <a href="acti2.html">Actividad 2 - Tecnologías</a>
-                <a href="acti3.html">Actividad 3 - HTTP</a>
-                <a href="acti4.html">Actividad 4 - CV Online</a>
-            </div>
+        <div class="logo">Internet en Acción</div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <a href="#final">Ciclos formativos</a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#inicio">Inicio</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#final">Ciclos formativos</a>
+        </div>
     </nav>
 
     <!-- HERO -->
@@ -119,18 +120,25 @@
         </h2>
         <div class="flexp">
             <div class="card" data-aos="fade-right">
-                <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/admin-sist-informaticos-red.html"><img src="logo1.png" alt="Técnico Superior en Administración de Sistemas Informáticos en Red"></a>
+                <a
+                    href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/admin-sist-informaticos-red.html"><img
+                        src="logo1.png" alt="Técnico Superior en Administración de Sistemas Informáticos en Red"></a>
             </div>
             <div class="card" data-aos="fade-right">
-                <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/des-aplicaciones-web.html"><img src="logo2.png" alt="Técnico Superior en Desarrollo de Aplicaciones Web"></a>
+                <a
+                    href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/des-aplicaciones-web.html"><img
+                        src="logo2.png" alt="Técnico Superior en Desarrollo de Aplicaciones Web"></a>
             </div>
             <div class="card" data-aos="fade-right">
-               <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/sistemas-microniformaticos-redes.html"> <img src="logo2.png" alt="Técnico en Sistemas Microinformáticos y Redes"></a>
+                <a
+                    href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/sistemas-microniformaticos-redes.html">
+                    <img src="logo2.png" alt="Técnico en Sistemas Microinformáticos y Redes"></a>
             </div>
         </div>
         <div class="card" data-aos="fade-left">
             <h3>Accede a nuestra oferta formativa:</h3>
-            <a href="https://www.iesluisvelez.org/portal/"><img src="velez-cabecera-600.png" alt="" style="width: 477px; box-shadow: none;"></a>
+            <a href="https://www.iesluisvelez.org/portal/"><img src="velez-cabecera-600.png" alt=""
+                    style="box-shadow: none;"></a>
         </div>
 
     </section>
@@ -152,7 +160,15 @@
             pagination: { el: '.swiper-pagination', clickable: true }
         });
     </script>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
 
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>
