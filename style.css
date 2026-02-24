@@ -39,32 +39,34 @@
  }
 
  nav .logo img {
-    width: 400px;
+     width: 400px;
  }
 
  nav a:hover {
      color: var(--primary);
  }
 
-.btn {
-    font-size: .8125rem;
-    border-radius: 5px;
-    font-weight: 700;
-}
-.card .btn-primary {
-    color: #fff;
-    background-color: #087021;
-    border-color: #087021;
-    padding: 25px;
-}
+ .btn {
+     font-size: .8125rem;
+     border-radius: 5px;
+     font-weight: 700;
+ }
+
+ .card .btn-primary {
+     color: #fff;
+     background-color: #087021;
+     border-color: #087021;
+     padding: 25px;
+ }
+
  .card .btn-primary:hover {
      background-color: rgb(5.45, 76.3, 22.48125);
      border-color: rgb(4.6, 64.4, 18.975);
  }
 
-.card .btn-primary i {
-    margin-right: 10px;
-}
+ .card .btn-primary i {
+     margin-right: 10px;
+ }
 
  /* SECTION */
  section {
@@ -144,7 +146,7 @@
 
  .card h3 {
      font-size: 1.6rem;
-     margin-bottom: 15px;
+     margin-bottom: 25px;
      color: var(--dark);
  }
 
@@ -175,18 +177,22 @@
      gap: 40px;
  }
 
- @media (max-width: 768px) {
-     nav {
-         flex-direction: column;
-         gap: 15px;
-         padding: 15px;
-     }
+@media (max-width: 768px) {
 
-     nav a {
-         width: 100%;
-         text-align: center;
-     }
- }
+    nav {
+        flex-direction: row;
+        /* 👈 mantenemos en fila */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        width: 180px;
+        /* opcional: reduce logo en móvil */
+    }
+
+}
 
  /* FINAL RESPONSIVE */
  .flexp {
@@ -206,14 +212,17 @@
  #final .card img {
      width: 100%;
      height: auto;
+     border-radius: 0;
  }
 
- #final > .card {
-    margin-top: 30px;
+ #final>.card {
+     margin-top: 30px;
  }
-  #final>.card img {
- max-width: 450px;
-  } 
+
+ #final>.card img {
+     max-width: 450px;
+ }
+
  @media (max-width: 768px) {
      #final .card {
          padding: 20px;
@@ -228,7 +237,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-    background: var(--dark);
+     background: var(--dark);
      backdrop-filter: blur(12px);
      z-index: 1000;
  }
@@ -238,6 +247,14 @@
      font-size: 1.2rem;
  }
 
+  @media (max-width: 768px) {
+    .logo {
+        max-width: 80%;
+    }
+        nav .logo img {
+            width: 100%;
+        }
+  }
  /* NAV LINKS */
  .nav-links {
      display: flex;
@@ -293,11 +310,11 @@
 
      .nav-links {
          position: absolute;
-         top: 100px;
+         top: 100%;
          right: 0;
          width: 100%;
          flex-direction: column;
-         background: rgba(15, 23, 42, 0.98);
+         background: var(--dark);
          text-align: center;
          padding: 30px 0;
          gap: 25px;
