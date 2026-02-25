@@ -88,54 +88,79 @@
      color: var(--primary);
  }
 
-.home-btn {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
+ .code {
+     background: #111;
+     color: #00ff88;
+     padding: 20px;
+     border-radius: 15px;
+     font-family: monospace;
+     font-size: 0.9rem;
+     margin: 5px 0;
+     overflow-x: auto;
+     /* scroll interno */
+     max-width: 100%;
+ }
 
-    background: var(--dark);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+ .code {
+     white-space: pre-wrap;
+     overflow-wrap: anywhere;
+ }
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 50px;
+ @media (max-width: 768px) {
+     .code {
+         font-size: 0.8rem;
+     }
+ }
 
-    color: white;
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-decoration: none;
+ .home-btn {
+     position: fixed;
+     top: 25px;
+     right: 25px;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     padding: 10px 16px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+     background: var(--dark);
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
 
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
+     border: 1px solid rgba(255, 255, 255, 0.15);
+     border-radius: 50px;
 
-.home-btn svg {
-    width: 18px;
-    height: 18px;
-}
+     color: white;
+     font-weight: 600;
+     font-size: 0.85rem;
+     text-decoration: none;
 
-.home-btn:hover {
-    transform: translateY(-3px);
-    background: var(--main);
-    border-color: var(--main);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-@media (max-width: 768px) {
-    .home-btn span {
-        display: none;
-    }
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 
-    .home-btn {
-        padding: 12px;
-        border-radius: 50%;
-    }
-}
+     transition: all 0.3s ease;
+     z-index: 1000;
+ }
+
+ .home-btn svg {
+     width: 18px;
+     height: 18px;
+ }
+
+ .home-btn:hover {
+     transform: translateY(-3px);
+     background: var(--main);
+     border-color: var(--main);
+     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+ }
+
+ @media (max-width: 768px) {
+     .home-btn span {
+         display: none;
+     }
+
+     .home-btn {
+         padding: 12px;
+         border-radius: 50%;
+     }
+ }
 
  /* ====== ZOOM IMAGEN ====== */
 
