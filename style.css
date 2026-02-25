@@ -258,8 +258,16 @@
          max-width: 80%;
      }
 
+     section {
+        padding: 120px 5%;
+     }
+
      nav .logo img {
-         width: 100%;
+            object-fit: cover;
+                height: 50px;
+                width: 53px;
+                object-position: left;
+                overflow: hidden;
      }
  }
 
@@ -341,9 +349,9 @@
 
  .ribbon {
      position: absolute;
-     top: 30px;
-     width: 210px;
-     right: 57%;
+     top: 5%;
+     width: 70%;
+     right: 50%;
      background: #e63946;
      color: white;
      padding: 8px 60px;
@@ -351,4 +359,8 @@
      font-weight: bold;
      transform: rotate(-45deg);
      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+ }
+
+ .ribbon .fa {
+        margin-left: 6px;
  }
