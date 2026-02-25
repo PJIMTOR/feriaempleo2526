@@ -11,12 +11,20 @@
      box-sizing: border-box;
  }
 
+ html {
+     overflow-x: hidden;
+ }
+
  body {
      font-family: 'Poppins', sans-serif;
      background: var(--primary);
      color: var(--main);
      scroll-behavior: smooth;
      overflow-x: hidden;
+ }
+
+ h1 span {
+     font-size: 26px;
  }
 
  h2 {
@@ -96,6 +104,14 @@
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      margin-bottom: 20px;
+ }
+
+ @media (max-width: 768px) {
+
+     .hero h1 {
+         font-size: 35px;
+         line-height: 1.1;
+     }
  }
 
  /* SWIPER */
@@ -259,15 +275,15 @@
      }
 
      section {
-        padding: 120px 5%;
+         padding: 120px 5%;
      }
 
      nav .logo img {
-            object-fit: cover;
-                height: 50px;
-                width: 53px;
-                object-position: left;
-                overflow: hidden;
+         object-fit: cover;
+         height: 50px;
+         width: 53px;
+         object-position: left;
+         overflow: hidden;
      }
  }
 
@@ -345,6 +361,7 @@
 
  .img-ribbon {
      overflow: hidden;
+     position: relative;
  }
 
  .ribbon {
@@ -362,5 +379,5 @@
  }
 
  .ribbon .fa {
-        margin-left: 6px;
+     margin-left: 6px;
  }
