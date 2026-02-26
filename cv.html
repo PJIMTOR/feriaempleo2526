@@ -27,76 +27,76 @@
 
     <section class="cv-section">
 
-    <h2 class="cv-title">CV publicados</h2>
-    <p class="cv-subtitle">
-        Actualmente hay <span id="cv-count">0</span> CV publicados
-    </p>
+        <h2 class="cv-title">CV publicados</h2>
+        <p class="cv-subtitle">
+            Actualmente hay <span id="cv-count">0</span> CV publicados
+        </p>
 
-    <div id="loading" class="loading">Cargando CVs...</div>
+        <div id="loading" class="loading">Cargando CVs...</div>
 
-    <div id="cv-list" class="cv-grid"></div>
+        <div id="cv-list" class="cv-grid"></div>
 
-</section>
+    </section>
 
     <footer>
         Mi CV - Taller FP DAW © 2026
     </footer>
 
     <script>
-    const list = document.getElementById("cv-list");
-    const countSpan = document.getElementById("cv-count");
-    const loading = document.getElementById("loading");
+        const list = document.getElementById("cv-list");
+        const countSpan = document.getElementById("cv-count");
+        const loading = document.getElementById("loading");
 
-    function formatName(filename) {
-        return filename
-            .replace(".html", "")
-            .replace(/[-_]/g, " ")
-            .split(" ")
-            .map(word =>
-                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            )
-            .join(" ");
-    }
+        function formatName(filename) {
+            return filename
+                .replace(".html", "")
+                .replace(/[-_]/g, " ")
+                .split(" ")
+                .map(word =>
+                    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                )
+                .join(" ");
+        }
 
-    fetch("https://api.github.com/repos/pjimtor/feriaempleo2526/contents/cv")
-        .then(response => response.json())
-        .then(files => {
+        fetch("https://api.github.com/repos/pjimtor/feriaempleo2526/contents/cv")
+            .then(response => response.json())
+            .then(files => {
 
-            const htmlFiles = files
-                .filter(file => file.name.endsWith(".html"))
-                .sort((a, b) => a.name.localeCompare(b.name));
+                const htmlFiles = files
+                    .filter(file => file.name.endsWith(".html"))
+                    .sort((a, b) => a.name.localeCompare(b.name));
 
-            loading.style.display = "none";
+                loading.style.display = "none";
 
-            if (htmlFiles.length === 0) {
-                list.innerHTML = "<p>No hay CVs publicados todavía.</p>";
-                return;
-            }
+                if (htmlFiles.length === 0) {
+                    list.innerHTML = "<p>No hay CVs publicados todavía.</p>";
+                    return;
+                }
 
-            countSpan.textContent = htmlFiles.length;
+                countSpan.textContent = htmlFiles.length;
 
-            htmlFiles.forEach(file => {
+                htmlFiles.forEach(file => {
 
-                const card = document.createElement("a");
-                card.href = "cv/" + file.name;
-                card.target = "_blank";
-                card.classList.add("cv-card");
+                    const card = document.createElement("a");
+                    card.href = "cv/" + file.name;
+                    card.target = "_blank";
+                    card.classList.add("cv-card");
 
-                card.innerHTML = `
+                    card.innerHTML = `
                     <div class="cv-icon">📄</div>
                     <h3>${formatName(file.name)}</h3>
                     <span>Ver CV</span>
                 `;
 
-                list.appendChild(card);
-            });
+                    list.appendChild(card);
+                });
 
-        })
-        .catch(error => {
-            loading.textContent = "Error cargando los CVs.";
-            console.error(error);
-        });
-</script>
+            })
+            .catch(error => {
+                loading.textContent = "Error cargando los CVs.";
+                console.error(error);
+            });
+    </script>
 </body>
 
 </html>

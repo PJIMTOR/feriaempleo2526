@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carla Giménez - CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    font-family:'Montserrat',sans-serif;
+    display:flex;
+    min-height:100vh;
+}
+.sidebar{
+    background:#111827;
+    color:white;
+    padding:40px 30px;
+    width:280px;
+}
+.sidebar h1{
+    margin-top:0;
+}
+.sidebar p{
+    color:#9ca3af;
+}
+.main{
+    flex:1;
+    padding:50px;
+    background:#f9fafb;
+}
+h2{
+    margin-top:0;
+    color:#111827;
+}
+.timeline{
+    border-left:3px solid #6366f1;
+    padding-left:20px;
+}
+.timeline-item{
+    margin-bottom:20px;
+}
+.timeline-item span{
+    font-size:14px;
+    color:#6b7280;
+}
+.interests span{
+    background:#6366f1;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    margin:5px;
+    display:inline-block;
+}
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+    .sidebar{
+        width:100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Carla Giménez</h1>
+    <p>Marketing Digital & Analítica</p>
+    <h3>Estudios</h3>
+    <p>Grado en Marketing</p>
+    <p>Máster en Analítica Digital</p>
+</div>
+
+<div class="main">
+
+    <h2>Experiencia</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Digital Marketing Manager</strong><br>
+            <span>Bright Agency (2023-2026)</span>
+            <p>Gestión de campañas SEM y estrategia SEO internacional.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>Community Manager</strong><br>
+            <span>Urban Trends (2021-2023)</span>
+            <p>Desarrollo de marca y crecimiento de comunidad online.</p>
+        </div>
+    </div>
+
+    <h2>Intereses</h2>
+    <div class="interests">
+        <span>Branding</span>
+        <span>Data Analytics</span>
+        <span>Psicología del consumidor</span>
+        <span>Yoga</span>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diego Ruiz - CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+}
+header{
+    background:linear-gradient(135deg,#06b6d4,#3b82f6);
+    padding:60px 20px;
+    text-align:center;
+}
+header h1{
+    margin:0;
+    font-size:42px;
+}
+header p{
+    margin-top:10px;
+    font-weight:300;
+}
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:16px;
+}
+h2{
+    border-bottom:2px solid #334155;
+    padding-bottom:10px;
+}
+ul{
+    list-style:none;
+    padding:0;
+}
+li{
+    margin-bottom:10px;
+}
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Diego Ruiz</h1>
+    <p>Especialista en Ciberseguridad</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Estudios</h2>
+        <ul>
+            <li>Ingeniería Informática</li>
+            <li>Máster en Seguridad de la Información</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Experiencia</h2>
+        <ul>
+            <li>Analista SOC – SecureIT (2022-2025)</li>
+            <li>Administrador de Sistemas – DataCore (2019-2022)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Intereses</h2>
+        <ul>
+            <li>Hacking ético</li>
+            <li>Automatización con Python</li>
+            <li>Blockchain</li>
+            <li>Trail running</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
