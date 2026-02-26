@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3 - Peticiones HTTP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+    <a href="index.html" class="home-btn">
+        <span>Inicio</span>
+        <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 10.5L12 3L21 10.5V21H14V15H10V21H3V10.5Z" stroke="currentColor" stroke-width="1.8"
+                stroke-linejoin="round" />
+        </svg>
+    </a>
+
+    <header>
+        <h1>Actividad 3 🌐<br><span>Cómo funcionan las peticiones HTTP</span></h1>
+        <p>Descubre qué ocurre cuando escribes una URL y pulsas Enter.</p>
+    </header>
+
+    <section>
+
+        <ul id="cv-list"></ul>
+
+    </section>
+
+    <footer>
+        Actividad 3 - Taller FP DAW © 2026
+    </footer>
+
+    <script>
+        fetch("https://api.github.com/repos/pjimtor/feriaempleo2526/contents/cv")
+            .then(response => response.json())
+            .then(files => {
+                const list = document.getElementById("cv-list");
+
+                files
+                    .filter(file => file.name.endsWith(".html"))
+                    .forEach(file => {
+                        const li = document.createElement("li");
+                        const a = document.createElement("a");
+
+                        a.href = "cv/" + file.name;
+                        a.textContent = file.name.replace(".html", "");
+                        a.target = "_blank";
+
+                        li.appendChild(a);
+                        list.appendChild(li);
+                    });
+            })
+            .catch(error => console.error("Error cargando CVs:", error));
+    </script>
+</body>
+
+</html>
