@@ -21,42 +21,82 @@
     </a>
 
     <header>
-        <h1>Actividad 3 🌐<br><span>Cómo funcionan las peticiones HTTP</span></h1>
-        <p>Descubre qué ocurre cuando escribes una URL y pulsas Enter.</p>
+        <h1>Actividad 4 📤<br><span>Publica tu CV en Internet</span></h1>
+        <p>Aprende a crear tu primer CV online con IA y subirlo a la web en minutos.</p>
     </header>
 
-    <section>
+    <section class="cv-section">
 
-        <ul id="cv-list"></ul>
+    <h2 class="cv-title">CV publicados</h2>
+    <p class="cv-subtitle">
+        Actualmente hay <span id="cv-count">0</span> CV publicados
+    </p>
 
-    </section>
+    <div id="loading" class="loading">Cargando CVs...</div>
+
+    <div id="cv-list" class="cv-grid"></div>
+
+</section>
 
     <footer>
-        Actividad 3 - Taller FP DAW © 2026
+        Mi CV - Taller FP DAW © 2026
     </footer>
 
     <script>
-        fetch("https://api.github.com/repos/pjimtor/feriaempleo2526/contents/cv")
-            .then(response => response.json())
-            .then(files => {
-                const list = document.getElementById("cv-list");
+    const list = document.getElementById("cv-list");
+    const countSpan = document.getElementById("cv-count");
+    const loading = document.getElementById("loading");
 
-                files
-                    .filter(file => file.name.endsWith(".html"))
-                    .forEach(file => {
-                        const li = document.createElement("li");
-                        const a = document.createElement("a");
+    function formatName(filename) {
+        return filename
+            .replace(".html", "")
+            .replace(/[-_]/g, " ")
+            .split(" ")
+            .map(word =>
+                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+            )
+            .join(" ");
+    }
 
-                        a.href = "cv/" + file.name;
-                        a.textContent = file.name.replace(".html", "");
-                        a.target = "_blank";
+    fetch("https://api.github.com/repos/pjimtor/feriaempleo2526/contents/cv")
+        .then(response => response.json())
+        .then(files => {
 
-                        li.appendChild(a);
-                        list.appendChild(li);
-                    });
-            })
-            .catch(error => console.error("Error cargando CVs:", error));
-    </script>
+            const htmlFiles = files
+                .filter(file => file.name.endsWith(".html"))
+                .sort((a, b) => a.name.localeCompare(b.name));
+
+            loading.style.display = "none";
+
+            if (htmlFiles.length === 0) {
+                list.innerHTML = "<p>No hay CVs publicados todavía.</p>";
+                return;
+            }
+
+            countSpan.textContent = htmlFiles.length;
+
+            htmlFiles.forEach(file => {
+
+                const card = document.createElement("a");
+                card.href = "cv/" + file.name;
+                card.target = "_blank";
+                card.classList.add("cv-card");
+
+                card.innerHTML = `
+                    <div class="cv-icon">📄</div>
+                    <h3>${formatName(file.name)}</h3>
+                    <span>Ver CV</span>
+                `;
+
+                list.appendChild(card);
+            });
+
+        })
+        .catch(error => {
+            loading.textContent = "Error cargando los CVs.";
+            console.error(error);
+        });
+</script>
 </body>
 
 </html>
