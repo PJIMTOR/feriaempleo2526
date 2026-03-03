@@ -106,7 +106,7 @@
      margin-bottom: 20px;
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 1240px) {
      .hero h1 {
          font-size: 35px;
          line-height: 1.1;
@@ -163,6 +163,8 @@
      width: 100%;
      border-radius: 20px;
      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+     max-height: 350px;
+     object-fit: cover;
  }
 
  .card h3 {
@@ -198,7 +200,7 @@
      gap: 40px;
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 1240px) {
 
      nav {
          flex-direction: row;
@@ -244,7 +246,7 @@
      max-width: 450px;
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 1240px) {
      #final .card {
          padding: 20px;
      }
@@ -268,7 +270,7 @@
      font-size: 1.2rem;
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 1240px) {
      .logo {
          max-width: 80%;
      }
@@ -333,7 +335,7 @@
  }
 
  /* RESPONSIVE */
- @media (max-width: 768px) {
+ @media (max-width: 1240px) {
 
      .hamburger {
          display: flex;
