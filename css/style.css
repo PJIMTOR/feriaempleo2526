@@ -167,6 +167,10 @@
      object-fit: cover;
  }
 
+ #final .card img {
+    max-height: unset;
+ }
+
  .card h3 {
      font-size: 1.6rem;
      margin-bottom: 25px;
