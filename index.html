@@ -195,26 +195,25 @@
             });
         });
     </script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
     <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
 
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-                apiKey: "AIzaSyCPGJ43OMp6rzCG2TmwYZ71-TYDEaDnK58",
-                authDomain: "feria-empleo-25-26.firebaseapp.com",
-                projectId: "feria-empleo-25-26",
-                storageBucket: "feria-empleo-25-26.firebasestorage.app",
-                messagingSenderId: "945285671988",
-                appId: "1:945285671988:web:2bde29a9a5807f99e96e61"
-            };
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+        import { getDatabase, ref, onValue, runTransaction }
+            from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
 
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
+        // Configuración
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "feria-empleo-25-26.firebaseapp.com",
+            projectId: "feria-empleo-25-26",
+            storageBucket: "feria-empleo-25-26.firebasestorage.app",
+            messagingSenderId: "945285671988",
+            appId: "1:945285671988:web:2bde29a9a5807f99e96e61",
+            databaseURL: "https://feria-empleo-25-26-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+        // Inicializar
+        const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
         const contador = document.getElementById("contador");
@@ -223,19 +222,19 @@
 
         const contadorRef = ref(db, "contador");
 
-        // Escuchar cambios en tiempo real
+        // Escuchar cambios
         onValue(contadorRef, (snapshot) => {
             const data = snapshot.val();
             contador.innerText = data || 0;
         });
 
-        // Evitar doble voto por dispositivo
+        // Evitar doble voto
         if (localStorage.getItem("yaVoto")) {
             btn.disabled = true;
             btn.innerText = "🔥 Ya formas parte";
         }
 
-        // Al hacer click
+        // Click
         btn.addEventListener("click", () => {
 
             if (!localStorage.getItem("yaVoto")) {
@@ -250,8 +249,8 @@
                 btn.innerText = "🔥 Registrado";
                 mensaje.innerText = "Bienvenido al futuro 👨‍💻👩‍💻";
             }
-
         });
+
     </script>
 </body>
 
