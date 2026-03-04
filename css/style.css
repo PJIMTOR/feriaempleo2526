@@ -168,7 +168,7 @@
  }
 
  #final .card img {
-    max-height: unset;
+     max-height: unset;
  }
 
  .card h3 {
@@ -388,111 +388,112 @@
  }
 
  @font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Light.ttf') format('truetype');
-  font-weight: 300;
-}
+     font-family: 'Poppins';
+     src: url('../fonts/Poppins-Light.ttf') format('truetype');
+     font-weight: 300;
+ }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
+ @font-face {
+     font-family: 'Poppins';
+     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+     font-weight: 400;
+ }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-}
+ @font-face {
+     font-family: 'Poppins';
+     src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+     font-weight: 600;
+ }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-}
+ @font-face {
+     font-family: 'Poppins';
+     src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
+     font-weight: 800;
+ }
 
-/* ========================= */
-/*      DEV COUNTER          */
-/* ========================= */
+ /* ========================= */
+ /*      DEV COUNTER          */
+ /* ========================= */
 
-.dev-counter {
-    margin-top: 80px;
-    padding: 60px 40px;
-    border-radius: 25px;
+ .dev-counter {
+     margin-top: 80px;
+     padding: 60px 40px;
+     border-radius: 25px;
 
-    background: var(--glass);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+     background: var(--glass);
+     backdrop-filter: blur(15px);
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 25px;
 
-    transition: 0.4s;
-}
+     transition: 0.4s;
+ }
 
-.dev-counter:hover {
-    transform: translateY(-5px);
-}
+ .dev-counter:hover {
+     transform: translateY(-5px);
+ }
 
-.dev-counter h3 {
-    font-size: 1.6rem;
-    color: var(--dark);
-    text-align: center;
-}
+ .dev-counter h3 {
+     font-size: 1.6rem;
+     color: var(--dark);
+     text-align: center;
+ }
 
-#contador {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--main);
-    transition: 0.3s;
-}
+ #contador {
+     font-size: 3.5rem;
+     font-weight: 800;
+     color: var(--main);
+     transition: 0.3s;
+ }
 
-#btnDev {
-    padding: 14px 30px;
-    border-radius: 50px;
-    border: none;
+ #btnDev {
+     padding: 14px 30px;
+     border-radius: 50px;
+     border: none;
 
-    background: var(--main);
-    color: white;
+     background: var(--main);
+     color: white;
 
-    font-weight: 600;
-    font-size: 0.95rem;
+     font-weight: 600;
+     font-size: 0.95rem;
 
-    cursor: pointer;
-    transition: all 0.3s ease;
+     cursor: pointer;
+     transition: all 0.3s ease;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+ }
 
-#btnDev:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
-}
+ #btnDev:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+ }
 
-#btnDev:disabled {
-    background: #888;
-    cursor: not-allowed;
-    box-shadow: none;
-}
+ #btnDev:disabled {
+     background: #888;
+     cursor: not-allowed;
+     box-shadow: none;
+ }
 
-#mensaje {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    text-align: center;
-}
+ #mensaje {
+     font-size: 20px;
+     opacity: 0.8;
+     text-align: center;
+     margin-top: 20px;
+ }
 
-/* Responsive */
+ /* Responsive */
 
-@media (max-width: 900px) {
+ @media (max-width: 900px) {
 
-    .dev-counter {
-        padding: 40px 20px;
-    }
+     .dev-counter {
+         padding: 40px 20px;
+     }
 
-    #contador {
-        font-size: 2.5rem;
-    }
+     #contador {
+         font-size: 2.5rem;
+     }
 
-}
+ }
