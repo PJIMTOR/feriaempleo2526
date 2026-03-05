@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Quique García</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#1f2937,#4b5563);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    background:white;
+    width:800px;
+    max-width:95%;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    overflow:hidden;
+}
+
+.header{
+    background:linear-gradient(120deg,#2563eb,#3b82f6);
+    color:white;
+    padding:40px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:2.2rem;
+    letter-spacing:1px;
+}
+
+.header p{
+    opacity:0.9;
+    margin-top:5px;
+}
+
+.content{
+    padding:35px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.section{
+    margin-bottom:15px;
+}
+
+.section h2{
+    color:#2563eb;
+    margin-bottom:10px;
+    font-size:1.2rem;
+    border-bottom:2px solid #e5e7eb;
+    padding-bottom:5px;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    margin-bottom:6px;
+    padding-left:10px;
+    position:relative;
+}
+
+li::before{
+    content:"•";
+    color:#2563eb;
+    position:absolute;
+    left:0;
+}
+
+.footer{
+    text-align:center;
+    padding:15px;
+    font-size:0.9rem;
+    background:#f3f4f6;
+    color:#555;
+}
+
+@media (max-width:650px){
+    .content{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Quique García</h1>
+        <p>Currículum Vitae</p>
+    </div>
+
+    <div class="content">
+
+        <div class="section">
+            <h2>Educación</h2>
+            <ul>
+                <li>ESO</li>
+                <li>Bachillerato de Sociales</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Intereses</h2>
+            <ul>
+                <li>Economía</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Aprendizaje rápido</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Perfil</h2>
+            <p>Persona responsable con interés en el ámbito económico, capacidad de aprendizaje rápido y experiencia trabajando en equipo para lograr objetivos.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 - Quique García
+    </div>
+
+</div>
+
+</body>
+</html>
