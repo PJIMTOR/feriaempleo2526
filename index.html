@@ -152,6 +152,12 @@
                     style="box-shadow: none;"></a>
         </div>
 
+        <div class="dev-counter">
+            <h3>💻 ¿Cuántos futuros desarrolladores hay en Écija?</h3>
+            <div id="contador">0</div>
+            <button id="btnDev">Yo soy uno 🚀</button>
+            <p id="mensaje"></p>
+        </div>
     </section>
 
     <footer>
@@ -188,6 +194,63 @@
                 navLinks.classList.remove("active");
             });
         });
+    </script>
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+        import { getDatabase, ref, onValue, runTransaction }
+            from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+
+        // Configuración
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "feria-empleo-25-26.firebaseapp.com",
+            projectId: "feria-empleo-25-26",
+            storageBucket: "feria-empleo-25-26.firebasestorage.app",
+            messagingSenderId: "945285671988",
+            appId: "1:945285671988:web:2bde29a9a5807f99e96e61",
+            databaseURL: "https://feria-empleo-25-26-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+        // Inicializar
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        const contador = document.getElementById("contador");
+        const btn = document.getElementById("btnDev");
+        const mensaje = document.getElementById("mensaje");
+
+        const contadorRef = ref(db, "contador");
+
+        // Escuchar cambios
+        onValue(contadorRef, (snapshot) => {
+            const data = snapshot.val();
+            contador.innerText = data || 0;
+        });
+
+        // Evitar doble voto
+        if (localStorage.getItem("yaVoto")) {
+            btn.disabled = true;
+            btn.innerText = "🔥 Ya formas parte";
+        }
+
+        // Click
+        btn.addEventListener("click", () => {
+
+            if (!localStorage.getItem("yaVoto")) {
+
+                runTransaction(contadorRef, (current) => {
+                    return (current || 0) + 1;
+                });
+
+                localStorage.setItem("yaVoto", "true");
+
+                btn.disabled = true;
+                btn.innerText = "🔥 Registrado";
+                mensaje.innerHTML = "Bienvenido al futuro&nbsp;&nbsp;👨‍💻👩‍💻";
+            }
+        });
+
     </script>
 </body>
 
