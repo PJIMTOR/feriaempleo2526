@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Pepe Encina</title>
+  <style>
+    /* Reset y estilo base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* Contenedor principal */
+    .cv-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: #1e90ff;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #1e90ff;
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills li {
+      display: inline-block;
+      background-color: #e6f0ff;
+      color: #1e90ff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 5px 5px 0 0;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <header>
+      <h1>Pepe Encina</h1>
+      <p>Profesional en Administración | Apasionado por Finanzas y Deportes</p>
+    </header>
+
+    <section>
+      <h2>Formación</h2>
+      <ul>
+        <li>Grado Medio en Administración</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Intereses</h2>
+      <ul>
+        <li>Finanzas</li>
+        <li>Deportes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <li>Motivación</li>
+        <li>Aprendizaje rápido</li>
+        <li>Curiosidad</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
