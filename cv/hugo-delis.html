@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Hugo Delis García</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#0f172a,#1e293b);
+padding:40px;
+color:#333;
+}
+
+.cv{
+max-width:900px;
+margin:auto;
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.header{
+background: linear-gradient(135deg,#06b6d4,#3b82f6);
+color:white;
+padding:45px;
+text-align:center;
+}
+
+.header h1{
+font-size:36px;
+margin-bottom:8px;
+letter-spacing:1px;
+}
+
+.header p{
+opacity:0.9;
+font-size:16px;
+}
+
+.section{
+padding:35px 45px;
+border-bottom:1px solid #eee;
+}
+
+.section:last-child{
+border-bottom:none;
+}
+
+.section h2{
+color:#2563eb;
+margin-bottom:18px;
+font-size:22px;
+}
+
+ul{
+list-style:none;
+}
+
+ul li{
+padding:8px 0;
+padding-left:20px;
+position:relative;
+}
+
+ul li::before{
+content:"●";
+color:#3b82f6;
+position:absolute;
+left:0;
+}
+
+.skills span{
+display:inline-block;
+background:#3b82f6;
+color:white;
+padding:8px 16px;
+border-radius:25px;
+margin:5px;
+font-size:14px;
+}
+
+.footer{
+text-align:center;
+padding:18px;
+background:#f1f5f9;
+font-size:13px;
+color:#555;
+}
+
+@media (max-width:700px){
+
+body{
+padding:15px;
+}
+
+.header h1{
+font-size:28px;
+}
+
+.section{
+padding:25px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="cv">
+
+<div class="header">
+<h1>Hugo Delis García</h1>
+<p>Perfil personal</p>
+</div>
+
+<div class="section">
+<h2>🎓 Estudios</h2>
+<ul>
+<li>Educación Secundaria Obligatoria (ESO)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🎨 Intereses</h2>
+<ul>
+<li>Dibujo</li>
+<li>Animación</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🚀 Habilidades</h2>
+<div class="skills">
+<span>Trabajo en equipo</span>
+<span>Aprendizaje rápido</span>
+</div>
+</div>
+
+<div class="footer">
+CV profesional · Hugo Delis García
+</div>
+
+</div>
+
+</body>
+</html>
