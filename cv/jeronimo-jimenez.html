@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Jeronimo Jimenez</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#333;
+}
+
+.cv-container{
+    background:white;
+    width:90%;
+    max-width:800px;
+    border-radius:15px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:36px;
+    color:#1f2937;
+}
+
+.header p{
+    color:#6b7280;
+    margin-top:5px;
+}
+
+.section{
+    margin-top:25px;
+}
+
+.section h2{
+    font-size:20px;
+    margin-bottom:10px;
+    color:#2563eb;
+    border-bottom:2px solid #e5e7eb;
+    padding-bottom:5px;
+}
+
+.list{
+    list-style:none;
+    padding-left:10px;
+}
+
+.list li{
+    margin:8px 0;
+    padding-left:15px;
+    position:relative;
+}
+
+.list li::before{
+    content:"•";
+    color:#2563eb;
+    position:absolute;
+    left:0;
+}
+
+.footer{
+    margin-top:30px;
+    text-align:center;
+    font-size:14px;
+    color:#9ca3af;
+}
+
+@media (max-width:600px){
+    .cv-container{
+        padding:25px;
+    }
+
+    .header h1{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cv-container">
+
+<div class="header">
+<h1>Jerónimo Jiménez</h1>
+<p>Currículum Vitae</p>
+</div>
+
+<div class="section">
+<h2>🎓 Estudios</h2>
+<ul class="list">
+<li>Educación Secundaria Obligatoria (ESO)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>💻 Intereses</h2>
+<ul class="list">
+<li>Tecnología</li>
+<li>Videojuegos</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>⚡ Habilidades</h2>
+<ul class="list">
+<li>Trabajo en equipo</li>
+<li>Aprendizaje rápido</li>
+</ul>
+</div>
+
+<div class="footer">
+<p>CV generado en HTML y CSS</p>
+</div>
+
+</div>
+
+</body>
+</html>
