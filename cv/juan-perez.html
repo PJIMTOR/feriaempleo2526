@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Juan Pérez</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body{
+        background: linear-gradient(135deg,#1e3c72,#2a5298);
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:40px;
+    }
+
+    .cv-container{
+        background:white;
+        max-width:900px;
+        width:100%;
+        border-radius:12px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        overflow:hidden;
+        display:grid;
+        grid-template-columns: 300px 1fr;
+    }
+
+    .sidebar{
+        background:#2a5298;
+        color:white;
+        padding:30px;
+    }
+
+    .sidebar h1{
+        font-size:28px;
+        margin-bottom:10px;
+    }
+
+    .sidebar p{
+        opacity:0.9;
+        margin-bottom:20px;
+    }
+
+    .section{
+        margin-bottom:25px;
+    }
+
+    .section h3{
+        font-size:16px;
+        margin-bottom:10px;
+        border-bottom:2px solid rgba(255,255,255,0.3);
+        padding-bottom:5px;
+    }
+
+    .section ul{
+        list-style:none;
+    }
+
+    .section li{
+        margin-bottom:8px;
+        font-size:14px;
+    }
+
+    .main{
+        padding:40px;
+    }
+
+    .main h2{
+        color:#2a5298;
+        margin-bottom:15px;
+    }
+
+    .card{
+        background:#f5f7fb;
+        padding:20px;
+        border-radius:8px;
+        margin-bottom:20px;
+    }
+
+    .card h4{
+        margin-bottom:8px;
+        color:#333;
+    }
+
+    .card p{
+        color:#555;
+        font-size:14px;
+    }
+
+    footer{
+        margin-top:20px;
+        font-size:12px;
+        color:#888;
+    }
+
+    @media (max-width:700px){
+        .cv-container{
+            grid-template-columns:1fr;
+        }
+        .sidebar{
+            text-align:center;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="cv-container">
+
+    <aside class="sidebar">
+        <h1>Juan Pérez</h1>
+        <p>Currículum Vitae</p>
+
+        <div class="section">
+            <h3>Intereses</h3>
+            <ul>
+                <li>💻 Tecnología</li>
+                <li>🎮 Videojuegos</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Habilidades</h3>
+            <ul>
+                <li>🤝 Trabajo en equipo</li>
+                <li>⚡ Aprendizaje rápido</li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <h2>Perfil</h2>
+        <div class="card">
+            <p>
+                Persona motivada con interés en la tecnología y los videojuegos.
+                Destaco por mi capacidad de aprendizaje rápido y por trabajar
+                eficazmente en equipo.
+            </p>
+        </div>
+
+        <h2>Educación</h2>
+        <div class="card">
+            <h4>Educación Secundaria Obligatoria (ESO)</h4>
+            <p>Educación secundaria completada.</p>
+        </div>
+
+        <footer>
+            CV generado en HTML y CSS
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
