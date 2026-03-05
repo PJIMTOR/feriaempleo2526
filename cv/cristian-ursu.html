@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Cristian Ursu</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #007BFF;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      color: #007BFF;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #007BFF;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Cristian Ursu</h1>
+      <p>Estudios: ESO | Intereses: Tecnología y videojuegos</p>
+    </header>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <span class="skill">Trabajo en equipo</span>
+        <span class="skill">Aprendizaje rápido</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Intereses</h2>
+      <ul>
+        <li>Tecnología</li>
+        <li>Videojuegos</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2026 Cristian Ursu
+    </footer>
+  </div>
+
+</body>
+</html>
